@@ -198,7 +198,6 @@ def mainLoop(x):
       Test()
 
 
-p = Pool(5)
 lister=[0,0,0]
 def cpu(x):
   while True:
@@ -218,9 +217,12 @@ def audio(x):
   while True:
     with sd.Stream(callback=streamer):
       sd.sleep(10000)
+    
+    
+    
 def call(f):
     return f(0)
-
+p = Pool(5)
 
 
 p.map(call, [cpu,memory,mainLoop,audio,appThread])
