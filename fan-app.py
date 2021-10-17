@@ -39,7 +39,7 @@ def Connect():
     while True:
         try:
             global arduino
-            arduino = serial.Serial("COM5", 115200,timeout=.1)
+            arduino = serial.Serial("COM3", 115200,timeout=.1)
             print("arduino plugged in!")
             return True
 
